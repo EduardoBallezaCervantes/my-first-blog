@@ -15,8 +15,16 @@ h1 a, h2 a {
     color: #d6c242;
     font-size: 36pt;
     text-decoration: none;
+    text-align: center;
 }
 
+.barra_navegacion a,.barra_navegacion_dos, .barra_navegacion_tres, .barra_navegacion_cuatro, .op4 a{
+    color: #d6c242;
+    float: right;
+    font-size: 26pt;
+    margin-right: 20px;
+    font-family: 'Lobster', cursive;
+}
 .content {
     margin-left: 40px;
 }
@@ -37,11 +45,12 @@ h1, h2, h3, h4 {
     width: 100%;
 }
 
-.top-menu, .top-menu:hover, .top-menu:visited {
+.top-menu, .top-menu:hover, .top-menu:visited .top-menu a{
     color: #d6c242;
     float: right;
     font-size: 26pt;
     margin-right: 20px;
+    font-family: 'Lobster', cursive;
 }
 
 .post {
@@ -50,4 +59,9 @@ h1, h2, h3, h4 {
 
 .post h2 a, .post h2 a:visited {
     color: #000000;
+}
+.logo{
+    float: left;
+    width: 150px;
+    height: 100px;
 }
