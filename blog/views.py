@@ -2,7 +2,9 @@ from django.utils import timezone
 from django.shortcuts import redirect
 from django.shortcuts import render, get_object_or_404
 from .models import Post
-from .forms import PostForm
+from .forms import PostForm, CustomUserForm
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth import login, authenticate
 
 # Create your views here.
 
@@ -16,6 +18,7 @@ def post_detail(request, pk):
     post = get_object_or_404(Post, pk=pk)
     return render(request, 'blog/post_detail.html', {'post': post})
 
+@login_required
 def post_new(request):
     if request.method == "POST":
         form = PostForm(request.POST)
@@ -43,3 +46,20 @@ def post_edit(request, pk):
     else:
         form = PostForm(instance=post)
     return render(request, 'blog/post_edit.html', {'form': form})
+
+def registrar_usuario(request):
+    data = {
+        'form':CustomUserForm()
+    }
+    if request.method == 'POST':
+        formulario = CustomUserForm(request.POST)
+        if formulario.is_valid():
+            formulario.save()
+            #autentificar al usuario  y redirigirlo al inicio
+            username = formulario.cleaned_data['username']
+            password = formulario.cleaned_data['password1']
+            user = authenticate(username=username, password=password)
+            login(request, user)
+            return redirect(to='home')
+        
+    return render(request,'registration/registrar.html', data)

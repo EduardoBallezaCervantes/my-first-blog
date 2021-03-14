@@ -1,0 +1,14 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    <div class="post">
+        <form action="" method="POST">
+            {% csrf_token %}
+            <table>
+                {{form.as_table}}
+            </table>
+            <input type="seset" value="Limpiar">
+            <input type="submit" value="Registrar">
+        </form>
+    </div>
+{% endblock %}
