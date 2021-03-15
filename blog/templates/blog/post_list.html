@@ -15,23 +15,10 @@
         </div>
         <div class="barnav" role="navigation">
             <ul class="nav nav-tabs">
-                <li class="bn">
-                    <a href="{% url 'post_new' %}" class="top-menu">Nuevo Post</a>
-                </li>
-                <li class="bn">
-                    <a class="barra_navegacion_dos" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Editar Post</a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Separated link</a>
-                    </div>
-                </li>
-                <li class="barra_navegacion_tres">
-                    <a href="{% url 'post_new' %}" class="top-menu">Nuevo Post</a>
-                </li>
                 {% if user.is_authenticated %}
+                    <li class="bn">
+                        <a href="{% url 'post_new' %}" class="top-menu">Nuevo Post</a>
+                    </li>
                     <li>
                         <a href="#" class="top-menu">Usuario: {{ user.username }} </a>
                     </li>
@@ -65,8 +52,8 @@
                 </div>
             
             {% else %}
-            <div>
-                <h1 class ="titulo" >¡Bienvenidos!</h1>
+            <div class ="titulo">
+                <h1>¡Bienvenidos!</h1>
                 <h2>Registrate para poder publicar tu post y ver los demas post</h2>
             </div>
         {% endif %}
