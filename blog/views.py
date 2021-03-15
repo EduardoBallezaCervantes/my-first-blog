@@ -60,6 +60,6 @@ def registrar_usuario(request):
             password = formulario.cleaned_data['password1']
             user = authenticate(username=username, password=password)
             login(request, user)
-            return redirect(to='home')
+            return redirect(to='post_list')
         
     return render(request,'registration/registrar.html', data)
