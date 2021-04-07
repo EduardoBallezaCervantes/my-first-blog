@@ -5,6 +5,7 @@ from .models import Post
 from .forms import PostForm, CustomUserForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import login, authenticate
+from django.contrib import messages
 
 # Create your views here.
 
@@ -60,6 +61,7 @@ def registrar_usuario(request):
             password = formulario.cleaned_data['password1']
             user = authenticate(username=username, password=password)
             login(request, user)
-            return redirect(to='post_list')
-        
+            return redirect(to = 'post_list')
+        else:
+            messages.error(request, 'Los campos no estan llenados correctamente y no se permiten espacios')
     return render(request,'registration/registrar.html', data)
