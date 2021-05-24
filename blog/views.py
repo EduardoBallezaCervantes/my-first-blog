@@ -2,7 +2,7 @@ from django.utils import timezone
 from django.shortcuts import redirect
 from django.shortcuts import render, get_object_or_404
 from .models import Post
-from .forms import PostForm, CustomUserForm
+from .forms import PostForm, CustomUserForm, EnfermedadForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import login, authenticate
 from django.contrib import messages
@@ -65,3 +65,14 @@ def registrar_usuario(request):
         else:
             messages.error(request, 'Los campos no estan llenados correctamente y no se permiten espacios')
     return render(request,'registration/registrar.html', data)
+
+def enfermedad_view(request):
+    data = {
+        'form':EnfermedadForm
+    }
+    if request.method == 'POST':
+        form = EnfermedadForm(request.POST)
+        if form.is_valid(): 
+            form.save()
+            return redirect(to = 'post_list')
+    return render(request,'seguimiento/Enfermedad_form.html', data)

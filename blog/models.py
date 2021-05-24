@@ -17,3 +17,12 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+
+class Enfermedad(models.Model):
+    Nombre = models.CharField(max_length=50)
+    Sexo = models.CharField(max_length=10)
+    edad = models.IntegerField()
+    inicio_sintomas = models.DateTimeField()
+    fin_sintomas = models.DateTimeField()
+    vacunado = models.BooleanField()
+   
