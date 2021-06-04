@@ -10,6 +10,8 @@ class PostForm(forms.ModelForm):
     class Meta:
         model = Post
         fields = ('title', 'text',)
+        labels = {'title':'Titulo', 'text':'Texto'}
+        
         
 class CustomUserForm(UserCreationForm):
     

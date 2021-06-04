@@ -5,7 +5,7 @@ h1 a, h2 a {
 }
 h1 a, h2 a {
     color: #FCA205;
-    font-family: 'Lobster';
+    font-family: 'Copperplate Gothic';
 }
 .page-header {
     background-color: #144c24;
@@ -27,7 +27,7 @@ h1 a, h2 a {
 }
 
 h1, h2, h3, h4 {
-    font-family: 'Lobster', cursive;
+    font-family: 'Copperplate Gothic';
 }
 
 .date {
@@ -47,7 +47,7 @@ h1, h2, h3, h4 {
     float: right;
     font-size: 26pt;
     margin-right: 20px;
-    font-family: 'Lobster', cursive;
+    font-family:'Century Gothic';
 }
 
 .post {
