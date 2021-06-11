@@ -33,7 +33,7 @@ def post_new(request):
         form = PostForm()
     return render(request, 'blog/post_edit.html', {'form': form})
 
-
+@login_required
 def post_edit(request, pk):
     post = get_object_or_404(Post, pk=pk)
     if request.method == "POST":
@@ -47,6 +47,7 @@ def post_edit(request, pk):
     else:
         form = PostForm(instance=post)
     return render(request, 'blog/post_edit.html', {'form': form})
+
 
 def registrar_usuario(request):
     data = {
@@ -66,6 +67,7 @@ def registrar_usuario(request):
             messages.error(request, 'Los campos no estan llenados correctamente y no se permiten espacios')
     return render(request,'registration/registrar.html', data)
 
+@login_required
 def enfermedad_view(request):
     data = {
         'form':EnfermedadForm

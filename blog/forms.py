@@ -24,8 +24,9 @@ class EnfermedadForm(forms.ModelForm):
     class Meta:
         model =  Enfermedad
         fields = [
-            'Nombre',
-            'Sexo',
+            'nombre',
+            'nombreEnfermedad',
+            'sexo',
             'edad',
             'inicio_sintomas',
             'fin_sintomas',
@@ -33,6 +34,7 @@ class EnfermedadForm(forms.ModelForm):
         ]
         labels ={
             'nombre':'Nombre',
+            'nombreEnfermedad':'Nombre de la Enfermedad',
             'sexo':'Sexo',
             'edad':'Edad',
             'inicio_sintomas':'Fecha de inicio de sintomas',

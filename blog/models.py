@@ -19,8 +19,9 @@ class Post(models.Model):
         return self.title
 
 class Enfermedad(models.Model):
-    Nombre = models.CharField(max_length=50)
-    Sexo = models.CharField(max_length=10)
+    nombre = models.CharField(max_length=50)
+    nombreEnfermedad = models.CharField( max_length=50)
+    sexo = models.CharField(max_length=10)
     edad = models.IntegerField()
     inicio_sintomas = models.DateTimeField()
     fin_sintomas = models.DateTimeField()
