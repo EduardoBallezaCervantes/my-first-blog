@@ -84,7 +84,7 @@ h1, h2, h3, h4 {
     justify-content: space-between;
     font-family:'Century Gothic';
 }
-.navegar img{
+.logo{
     margin-left: 20px;
     margin-right: 50px;
     width: 110px;
@@ -94,7 +94,7 @@ h1, h2, h3, h4 {
     display: flex;
     margin-right: 30px;
     list-style: none;
-    position: fixed;
+ 
 }
 
 .nav-menu-item{
