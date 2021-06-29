@@ -1,6 +1,6 @@
 from django import forms
 from .models import Post
-from .models import Enfermedad
+from .models import Enfermedad, UserFullName 
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 
@@ -20,7 +20,6 @@ class CustomUserForm(UserCreationForm):
         fields = ['first_name','last_name','email','username','password1','password2']
         
 class EnfermedadForm(forms.ModelForm):
-    
     class Meta:
         model =  Enfermedad
         fields = [
@@ -30,7 +29,7 @@ class EnfermedadForm(forms.ModelForm):
             'edad',
             'inicio_sintomas',
             'fin_sintomas',
-            'vacunado'
+            'vacunado',
         ]
         labels ={
             'nombre':'Nombre',
@@ -42,6 +41,7 @@ class EnfermedadForm(forms.ModelForm):
             'vacunado':'¿Ya esta vacunado?'
         }
         widgets = {
+            #'nombre':forms.ModelCharField(queryset=UserFullName.objects.all()),
             'inicio_sintomas':forms.DateInput(attrs={'type':'date'}),
             'fin_sintomas': forms.DateInput(attrs={'type':'date'})   
         }

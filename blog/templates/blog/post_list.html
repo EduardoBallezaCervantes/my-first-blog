@@ -7,39 +7,54 @@
         <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="{% static 'css/blog.css' %}">
         <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/icon.ico' %}">
+        <script src="https://kit.fontawesome.com/7e5b2d153f.js" crossorigin="anonymous"></script>
+        <script defer src="{% static 'script/index.js'%}"></script>
+
     </head>
     <body>
         <div class="page-header">
-            <img class="logo" src="{% static 'img/uaem.png' %}">
             <h1><a href="/">Blog de la Ingeniería en Sistemas Inteligentes</a></h1>
+
         </div>
-        <div class="barnav" role="navigation">
-            <ul class="nav nav-tabs">
-                {% if user.is_authenticated %}
-                    <li class="bn">
-                        <a href="{% url 'post_new' %}" class="top-menu">Nuevo Post</a>
+        <nav class="navegar">
+            {% if user.is_authenticated %}
+                <img class="logo" src="{% static 'img/uaem.png' %}" >
+                
+                <button class="toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-menu">
+                    <li class="nav-menu-item">
+                        <a href="{% url 'post_new' %}" class="nav-menu-link">Nuevo Post</a>
                     </li>
-                    <li>
-                        <a href="#" class="top-menu">Usuario: {{ user.username }} </a>
+                    <li class="nav-menu-item">
+                        <a href="{% url 'enfermedad_form' %}" class="nav-menu-link">LLenar seguimiento</a>
                     </li>
-                    <li>
-                        
-                        <a href="{% url 'enfermedad_form' %}" class="top-menu">LLenar seguimiento</a>
-                        
+                    <li class="nav-menu-item">
+                        <a href="{% url 'generadorQr' %}" class="nav-menu-link">Crear QR</a>
                     </li>
-                    <li>
-                        <a href="{% url 'logout' %}" class="top-menu">Cerrar sesión</a>
+                    <li class="nav-menu-item">
+                        <a href="{% url 'enfermedad_list'%}" class="nav-menu-link">Checar seguimientos</a>
+                    </li>
+                    
+                    <li class="nav-menu-item"> 
+                        <a href="#" class="nav-menu-link">Usuario: {{ user.username }} </a>
+                    </li>
+                    <li class="nav-menu-item">
+                        <a href="{% url 'logout' %}" class="nav-menu-link">Cerrar sesión</a>
                     </li>
                 {% else %}
-                    <li>
-                        <a href="{% url 'login' %}" class="top-menu">Iniciar sesion</a>
+                    <img class="logo" src="{% static 'img/uaem.png' %}" >
+                    <li class="nav-menu-item">
+                        <a href="{% url 'login' %}" class="nav-menu-link">Iniciar sesion</a>
                     </li>
-                    <li>
-                        <a href="{% url 'registrar_usuario' %}" class="top-menu">Registrar</a>
+                    <li class="nav-menu-item">
+                        <a href="{% url 'registrar_usuario' %}"class="nav-menu-link" >Registrar</a>
                     </li>
                 {% endif %}
             </ul>
-        </div>
+        </nav>
+        <hr></hr>
         <div class="content container">
             {% if user.is_authenticated %}
                 <div class="row">
@@ -50,12 +65,11 @@
                                     {{ post.published_date }}
                                 </div>
                                 <h2><a href="">{{ post.title }}</a></h2>
-                                <p>{{ post.text|linebreaksbr }}</p>
+                                <p class="texto">{{ post.text|linebreaksbr }}</p>
                             </div>
                         {% endfor %}
                     </div>
                 </div>
-            
             {% else %}
                 <div class ="titulo">
                     <h1>¡Bienvenidos!</h1>
