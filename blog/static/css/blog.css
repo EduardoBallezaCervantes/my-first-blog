@@ -1,16 +1,19 @@
 body{
     min-height: 100vh;
     margin:0;
-    /*background: linear-gradient(135deg, #144c24, #010200);*/
-    /*background: linear-gradient(45deg, #1eadf0, #0afb60);*/
-    /*background: linear-gradient(45deg, #0d105d, #780309);*/
-    /*background: linear-gradient(45deg, #052ab7, #35c317);*/
-    /*background: linear-gradient(45deg,#2f55d5 , #349bb6,#4ce199);*/
-    background: radial-gradient(circle at 0 0,#264f5e 45%,#72f24b);
+    background: radial-gradient(circle at 0 0,#264f5e 45%,#72f24b) no-repeat;
+    padding: 180px 20px 0;
 }
-
+.header{
+    height: 180px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
 .page-header {
-    margin-top: 0;
+    margin-top: 0;   
+    display: flex;
 }
 .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active{
     color: #faf9f2;
@@ -18,12 +21,11 @@ body{
     text-decoration: none;
     text-align: center;
     width: auto;
+    margin-left: 50px;
 }
 
-.content {
-    text-align: left;
-    margin-right: 40px;
-    
+.link{
+    text-decoration: none;
 }
 
 h1, h2, h3, h4 {
@@ -72,7 +74,13 @@ h1, h2, h3, h4 {
     
 }
 
-
+.logo{
+    
+    margin-left: 50px;
+    margin-right: 50px;
+    width: 100px;
+    height: 75px;
+}
 .titulo{
     text-align: center;
     font-size: x-large;
@@ -84,11 +92,19 @@ h1, h2, h3, h4 {
     justify-content: space-between;
     font-family:'Century Gothic';
 }
-.logo{
-    margin-left: 20px;
-    margin-right: 50px;
-    width: 110px;
-    height: 75px;
+.casita{
+    color:white;
+    background: none;
+    border: none;
+    font-size: 35px;
+    padding: 0 50px;
+    line-height: 50px;
+    cursor: pointer;
+    display: flexbox;
+}
+.casita:hover, .casita:active{
+    color: #72f24b;
+    transition: 0.5s;
 }
 .nav-menu{
     display: flex;
@@ -98,10 +114,10 @@ h1, h2, h3, h4 {
 }
 
 .nav-menu-item{
-    line-height: 80px;
+    line-height: 40px;
     font-family:'Copperplate Gothic';
     font-size: 22px;
-    line-height: 80px;
+    
     width: max-content;
 }
 
@@ -112,7 +128,7 @@ h1, h2, h3, h4 {
     color: #faf9f2;
     font-family:'Copperplate Gothic';
     font-size: 22px;
-    line-height: 80px;
+    line-height: 40px;
     width: max-content;
 }
 .nav-menu-link:hover,  .nav-menu-link:active{
@@ -134,32 +150,43 @@ hr{
     width:100% ;
     color:#000000;
 }
-
+.date{
+    text-decoration: none;
+}
 
 @media (max-width: 768px) {
     .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active{
-        color: #faf9f2;
         font-size: 15pt;
-        text-decoration: none;
-        text-align: center;
-        width: auto;
+        margin-left: 5px;
     }
-    .navegar img{
+   
+    .logo{
+        margin-top: 20px;
+        margin-left: 20px;
+        margin-right: 20;
         width: 60px;
         height: 45px;
     }
+    .casita{
+        
+        font-size: 20px;
+        padding: 0 50px;
+        line-height: 50px;
+        cursor: pointer;
+        display: flexbox;
+    }
     .nav-menu{
+        position: fixed;
         flex-direction: column;
         align-items: center;
         margin-right: 50px;
-        background-color:#000000;
-        position: fixed;
+        background: linear-gradient(45deg,#2f55d5 , #349bb6,#4ce199);
         left: 0;
-        top: 150px;
+        top: 130px;
         width: 100%;
         left: 100%; 
         padding: 10px 0;
-        height: calc(100%-50px);
+        height: 100%;
         overflow-y: auto;
         transition: left 0.4s;
     }
@@ -169,12 +196,16 @@ hr{
     }
     .nav-menu-link:hover,  .nav-menu-link:active{
         background: none;
-        color: #0ca8e0;
+        color: #08252fd8;
     }
     .toggle{
         margin-right: 20px;
-        font-size: 20px;
+        font-size: 25px;
         display: block;
+    }
+    .toggle:hover, .toggle:active{
+        color: #264f5e;
+        transition: 0.5s;
     }
     .navegar_active{
         left: 0;
