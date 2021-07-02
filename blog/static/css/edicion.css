@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.post{
+    margin-left: 100px;
+}
+.post a{
+    width: 10%;
+}
+.titulo, .texto{
+    color: aliceblue;
+}
+.date {
+    color: #dadada;
+    font-size: 16px;
+}
+
+.post {
+    margin-bottom: 70px;
+}

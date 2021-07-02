@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.row{
+    margin-right: 20px;
+    text-align: center;
+}
+.titulo, .texto{
+    color: aliceblue;
+}
+.date {
+    color: #dadada;
+    font-size: 16px;
+}
+
+.post {
+    margin-bottom: 70px;
+}

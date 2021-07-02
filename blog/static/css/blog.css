@@ -1,11 +1,12 @@
 body{
+    font-family: 'Century Gothic';
     min-height: 100vh;
     margin:0;
     background: radial-gradient(circle at 0 0,#264f5e 45%,#72f24b) no-repeat;
     padding: 180px 20px 0;
 }
 .header{
-    height: 180px;
+    height: 50px;
     position: fixed;
     width: 100%;
     top: 0;
@@ -17,79 +18,22 @@ body{
 }
 .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active{
     color: #faf9f2;
-    font-size: 30pt;
+    font-size: 25pt;
     text-decoration: none;
     text-align: center;
-    width: auto;
-    margin-left: 50px;
-}
-
-.link{
-    text-decoration: none;
-}
-
-h1, h2, h3, h4 {
-    font-family: 'Copperplate Gothic';
-}
-
-.date {
-    color: #999595;
-    font-size: 16px;
-}
-
-.save {
-    float: right;
-}
-
-.post-form textarea, .post-form input {
     width: 100%;
-}
-
-.top-menu, .top-menu:hover, .top-menu:visited .top-menu a{
-    color: #faf9f2;
-    float: right;
-    font-size: 26pt;
-    margin-right: 20px;
-    font-family:'Century Gothic';
-}
-
-.post {
-    margin-bottom: 70px;
-}
-
-.post h2 a, .post h2 a:visited {
-    color: #e6d3d3;
-}
-
-.texto{
-    color: #faf9f2;
-    font-size: 19px;
-}
-
-.contenido{
-    color:aliceblue;
-}
-
-.warning h1{
-    font-size: x-large;
-    color: #faf9f2;
-    
+    padding-right: 1%;
 }
 
 .logo{
-    
+    margin-top: 5px;
     margin-left: 50px;
-    margin-right: 50px;
-    width: 100px;
-    height: 75px;
+    margin-right: 0px;
+    width: 85px;
+    height: 65px;
 }
-.titulo{
-    text-align: center;
-    font-size: x-large;
-}
-
 .navegar{
-    margin: 0 auto;
+    margin: 0 5px;
     display: flex;
     justify-content: space-between;
     font-family:'Century Gothic';
@@ -98,9 +42,9 @@ h1, h2, h3, h4 {
     color:white;
     background: none;
     border: none;
-    font-size: 35px;
+    font-size: 27px;
     padding: 0 50px;
-    line-height: 50px;
+    line-height: 25px;
     cursor: pointer;
     display: flexbox;
 }
@@ -109,42 +53,40 @@ h1, h2, h3, h4 {
     transition: 0.5s;
 }
 .nav-menu{
+    
     display: flex;
     margin-right: 30px;
     list-style: none;
- 
-}
-
-.nav-menu-item{
-    line-height: 40px;
-    font-family:'Copperplate Gothic';
-    font-size: 22px;
     
+}
+.nav-menu-item{
+    line-height: 15px;
+    font-family:'Copperplate Gothic';
+    font-size: 25px;
     width: max-content;
 }
-
 .nav-menu-link{
-    padding: 0px 15px;
+    padding: 0px 10px;
     border-radius: 3px;
     text-decoration: none;
     color: #faf9f2;
     font-family:'Copperplate Gothic';
-    font-size: 22px;
-    line-height: 40px;
+    font-size: 20px;
+    line-height: 10px;
     width: max-content;
 }
 .nav-menu-link:hover,  .nav-menu-link:active{
    
-    color: #267895;
+    color: #72f24b;
     transition: 0.5s;
 }
 .toggle{
     color:white;
     background: none;
     border: none;
-    font-size: 30px;
+    font-size: 10px;
     padding: 0 20px;
-    line-height: 40px;
+    line-height: 10px;
     cursor: pointer;
     display: none;
 }
@@ -152,16 +94,16 @@ hr{
     width:100% ;
     color:#000000;
 }
-.date{
-    text-decoration: none;
-}
 
-@media (max-width: 768px) {
+@media screen and (max-width:768px) and (orientation: landscape){
+    body{
+        padding: 200px 20px 0;
+    }
     .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active{
+        line-height: 20px;
         font-size: 15pt;
         margin-left: 5px;
     }
-   
     .logo{
         margin-top: 20px;
         margin-left: 20px;
@@ -193,6 +135,7 @@ hr{
         transition: left 0.4s;
     }
     .nav-menu-item{
+        
         line-height: 40px;
         font-size: 15px;
     }
