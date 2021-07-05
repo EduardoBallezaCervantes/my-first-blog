@@ -6,7 +6,7 @@ body{
     color:aliceblue;
     width: 470px;
     height: 518px;
-    top:63.5%;
+    top:450px;
     left: 50%;
     position: absolute;
     transform: translate(-45%, -55%);
@@ -41,13 +41,13 @@ body{
     color: black;
     width: 100%;
     margin-bottom: 15px;
-    border-radius: 5px;
+    border-radius: 7px;
 }
 .boton{
     background-color:#72f24b;
     font-weight: bold;
     color: black;
-    border-radius: 20px;
+    border-radius: 23px;
 }
 @media(max-widh: 768px){
     .avatar{

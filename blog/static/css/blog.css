@@ -2,7 +2,7 @@ body{
     font-family: 'Century Gothic';
     min-height: 100vh;
     margin:0;
-    background: radial-gradient(circle at 0 0,#264f5e 45%,#72f24b) no-repeat;
+    background: radial-gradient(circle at 0 0,#264f5e 45%,#72f24b);
     padding: 180px 20px 0;
 }
 .header{
