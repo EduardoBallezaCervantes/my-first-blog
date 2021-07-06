@@ -95,7 +95,7 @@ hr{
     color:#000000;
 }
 
-@media screen and (max-width:768px) and (orientation: landscape){
+@media (max-width: 768px) {
     body{
         padding: 200px 20px 0;
     }
@@ -112,7 +112,6 @@ hr{
         height: 45px;
     }
     .casita{
-        
         font-size: 20px;
         padding: 0 50px;
         line-height: 50px;
@@ -134,8 +133,7 @@ hr{
         overflow-y: auto;
         transition: left 0.4s;
     }
-    .nav-menu-item{
-        
+    .nav-menu-item{  
         line-height: 40px;
         font-size: 15px;
     }
@@ -148,8 +146,7 @@ hr{
         font-size: 25px;
         display: block;
     }
-    .toggle:hover, .toggle:active{
-        color: #264f5e;
+    .toggle:hover, .toggle:active{ 
         transition: 0.5s;
     }
     .navegar_active{

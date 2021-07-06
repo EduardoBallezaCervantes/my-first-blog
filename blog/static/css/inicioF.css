@@ -50,10 +50,12 @@ body{
     font-weight: bold;
     color: black;
 }
-@media(max-widh: 768px){
-    .avatar{
-        width: 50px;
-        height: 50px;
-        top: 20%;
+
+@media (max-width: 768px) {
+    .titulo{
+        font-size: 30px;
+    }
+    .estructura{
+        width: 270px;
     }
 }

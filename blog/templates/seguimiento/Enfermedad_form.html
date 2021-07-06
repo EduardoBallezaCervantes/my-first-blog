@@ -3,11 +3,12 @@
 {% block content%}
     <head>
         <link rel="stylesheet" href="{% static 'css/seguimiento.css' %}">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
      <div class="estructura">
             <img class="avatar" src="{% static 'img/segui.png' %}" alt="avatar potro">
-            <h1 class="titulo">Registrate</h1>
+            <h1 class="titulo">Seguimiento</h1>
             <form action="" method="POST">
                 {% csrf_token %}
                 <div>
