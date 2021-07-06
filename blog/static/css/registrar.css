@@ -55,4 +55,7 @@ body{
         top: 453px;
         width: 250px;
     }
+    .avatar{
+        left: 35%;
+    }
 }
