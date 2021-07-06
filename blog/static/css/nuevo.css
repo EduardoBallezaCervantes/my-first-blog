@@ -63,7 +63,7 @@ body{
         height: 400px;
     }
 }
-@media (max-width: 400px) {
+@media (max-width: 350px) {
     .estructura{
         width: 250px;
     }

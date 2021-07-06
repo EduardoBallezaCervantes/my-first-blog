@@ -52,6 +52,7 @@ body{
 
 @media (max-width: 768px) {
     .estructura{
+        height: 550px;
         top: 453px;
         width: 350px;
     }
@@ -59,7 +60,7 @@ body{
         left: 35%;
     }
 }
-@media (max-width: 400px) {
+@media (max-width: 350px) {
     .estructura{
         top: 453px;
         width: 250px;

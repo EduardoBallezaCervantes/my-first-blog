@@ -55,12 +55,13 @@ body{
         top: 500px;
         width: 390px;
         left: 45%;
+        height: 650px;
     }
     .avatar{
         left: 35%;
     }
 }
-@media (max-width: 400px) {
+@media (max-width: 350px) {
     .estructura{
         top: 453px;
         width: 290px;
