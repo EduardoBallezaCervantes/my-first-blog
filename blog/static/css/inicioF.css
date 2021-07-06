@@ -56,6 +56,11 @@ body{
         font-size: 30px;
     }
     .estructura{
-        width: 270px;
+        width: 370px;
+    }
+}
+@media (max-width: 400px) {
+    .estructura{
+        width: 250px;
     }
 }

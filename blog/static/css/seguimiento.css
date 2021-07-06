@@ -53,10 +53,16 @@ body{
 @media (max-width: 768px) {
     .estructura{
         top: 500px;
-        width: 290px;
+        width: 390px;
         left: 45%;
     }
     .avatar{
         left: 35%;
+    }
+}
+@media (max-width: 400px) {
+    .estructura{
+        top: 453px;
+        width: 290px;
     }
 }
