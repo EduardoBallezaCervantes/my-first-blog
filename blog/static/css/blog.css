@@ -8,6 +8,7 @@ body{
 .header{
     height: 50px;
     position: fixed;
+    z-index: 3;
     width: 100%;
     top: 0;
     left: 0;
@@ -53,7 +54,6 @@ body{
     transition: 0.5s;
 }
 .nav-menu{
-    
     display: flex;
     margin-right: 30px;
     list-style: none;
@@ -124,7 +124,6 @@ hr{
         align-items: center;
         margin-right: 50px;
         background: linear-gradient(45deg,#2f55d5 , #349bb6,#4ce199);
-        left: 0;
         top: 130px;
         width: 100%;
         left: 100%; 
@@ -134,6 +133,7 @@ hr{
         transition: left 0.4s;
     }
     .nav-menu-item{  
+        position: relative;
         line-height: 40px;
         font-size: 15px;
     }
@@ -151,5 +151,11 @@ hr{
     }
     .navegar_active{
         left: 0;
+    }
+}
+
+@media (max-width: 350px) {
+    .nav-menu{
+        top: 175px;
     }
 }

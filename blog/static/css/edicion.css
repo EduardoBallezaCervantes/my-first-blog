@@ -2,9 +2,10 @@
     margin: 0;
     padding: 0;
 }
+
 .post{
     margin-left: 100px;
-}
+}   
 .post a{
     width: 10%;
 }

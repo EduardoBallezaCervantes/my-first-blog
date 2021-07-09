@@ -1,10 +1,11 @@
 body{
     font-family: 'Century Gothic';
+    
 }
 .estructura{ 
     background: black;
     color:aliceblue;
-    width: 320px;
+    width: 400px;
     height: 350px;
     top:370px;
     left: 50%;
@@ -56,12 +57,22 @@ body{
         font-size: 30px;
     }
     .estructura{
-        width: 370px;
+        width: 380px;
         height: 400px;
+    }
+}
+@media (max-width: 450px) {
+    .estructura{
+        width: 340px;
+    }
+}
+@media (max-width: 400px) {
+    .estructura{
+        width: 300px;
     }
 }
 @media (max-width: 350px) {
     .estructura{
-        width: 250px;
+        width: 270px;
     }
 }

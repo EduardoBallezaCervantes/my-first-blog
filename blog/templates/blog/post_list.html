@@ -5,10 +5,10 @@
         <link rel="stylesheet" href="{% static 'css/home.css' %}">
     </head>
     <body>
-        <div class="content container">
+        <div class="">
             {% if user.is_authenticated %}
                 <div class="row">
-                    <div class="col-md-8">
+                    <div class="">
                         {% for post in posts %}
                             <div class="post">
                                 <div class="date">
