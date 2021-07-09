@@ -119,11 +119,12 @@ hr{
         display: flexbox;
     }
     .nav-menu{
-        position: fixed;
+        position:fixed;
         flex-direction: column;
         align-items: center;
         margin-right: 50px;
         background: linear-gradient(45deg,#2f55d5 , #349bb6,#4ce199);
+        left: 0;
         top: 130px;
         width: 100%;
         left: 100%; 
@@ -138,6 +139,7 @@ hr{
         font-size: 15px;
     }
     .nav-menu-link:hover,  .nav-menu-link:active{
+        position: relative;
         background: none;
         color: #08252fd8;
     }
