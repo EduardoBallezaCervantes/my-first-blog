@@ -8,15 +8,22 @@
         <div class="">
             {% if user.is_authenticated %}
                 <div class="row">
-                    <div class="">
+                    <div class="bloque">
+                        
                         {% for post in posts %}
-                            <div class="post">
-                                <div class="date">
-                                    {{ post.published_date }}
+                            
+                            <div class="estructura">
+                                <div class="datos">
+                                    <h1 class="autor">{{ post.author }}</h1>
+                                    <h2 class="date">{{ post.published_date }}</h2>   
                                 </div>
-                                <h2 class="titulo">{{ post.title }}</h2>
-                                <p class="texto">{{ post.text|linebreaksbr }}</p>
+                                <div class="mostrar">
+                                    <h2 class="titulo">{{ post.title }}</h2>
+                                    <hr class="separador">
+                                    <p class="texto">{{ post.text|linebreaksbr }}</p>
+                                </div>
                             </div>
+                            <hr class="hr">
                         {% endfor %}
                     </div>
                 </div>

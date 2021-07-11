@@ -19,7 +19,7 @@ body{
 }
 .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active{
     color: #faf9f2;
-    font-size: 25pt;
+    font-size: 25px;
     text-decoration: none;
     text-align: center;
     width: 100%;
@@ -125,7 +125,7 @@ hr{
         margin-right: 50px;
         background: linear-gradient(45deg,#2f55d5 , #349bb6,#4ce199);
         left: 0;
-        top: 130px;
+        top: 143px;
         width: 100%;
         left: 100%; 
         padding: 10px 0;
@@ -156,8 +156,8 @@ hr{
     }
 }
 
-@media (max-width: 350px) {
+@media (max-width: 310px) {
     .nav-menu{
-        top: 175px;
+        top: 185px;
     }
 }
