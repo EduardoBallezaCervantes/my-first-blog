@@ -1,36 +1,36 @@
 {% extends 'blog/base.html' %}   
-
+{%load static%}
 {% block content %}
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <script type="text/javascript" src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js" ></script>	
+        <link rel="stylesheet" href="{% static 'css/asistencia.css' %}">
+    </head>
     <body>
-    <table class="table table-bordered">
-        <thead>
-                <tr>
-                    <td>Nombre</td>
-                    <td>Nombre de la enfermedad</td>
-                    <td>sexo</td>
-                    <td>edad</td>
-                    <td>Fecha inicio de sintomas</td>
-                    <td>Fecha fin de sintomas</td>
-                    <td>vacunado</td>
-                </tr>
-        </thead>
-        <tbody>
-            {% if enfermedades%}
-                {% for enfermedad in enfermedades%}
-                    <tr>
-                        <td>{{ enfermedad.nombre }}</td>
-                        <td>{{ enfermedad.nombreEnfermedad }}</td>
-                        <td>{{ enfermedad.sexo }}</td>
-                        <td>{{ enfermedad.edad }}</td>
-                        <td>{{ enfermedad.inicio_sintomas }}</td>
-                        <td>{{ enfermedad.fin_sintomas }}</td>
-                        <td>{{ enfermedad.vacunado }}</td>
-                    </tr>
-                {% endfor %}
-            {% else %}
-                <h1>no tiene registro aun<h1>
-            {% endif %}
-        </tbody>
-    </table>
+    <div class="estructura">
+        <img class="avatar" src="{% static 'img/mascota.png' %}" alt="avatar potro">
+        <h1 class="titulo">Escanea el codigo para registrar tu asistencia</h1>
+        <video id="preview" ></video>
+    <div>
+    <script>
+        let scanner = new Instascan.Scanner(
+            {
+                video: document.getElementById('preview')
+            }
+        );
+        scanner.addListener('scan', function(content) {
+
+            alert('Escanear el contenido: ' + content);
+            window.open(content, "_blank");
+        });
+        Instascan.Camera.getCameras().then(cameras => 
+        {
+            if(cameras.length > 0){
+                scanner.start(cameras[0]);
+            } else {
+                console.error("No existe camera en este dispositivo!");
+            }
+        });
+    </script>
     </body>
 {% endblock %}

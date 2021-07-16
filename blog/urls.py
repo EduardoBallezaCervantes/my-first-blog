@@ -13,5 +13,5 @@ urlpatterns = [
     path('registro/', views.registrar_usuario, name='registrar_usuario'),
     path('seguimiento/',views.enfermedad_view, name='enfermedad_form'),
     path('generadorQr/',views.generadorQr_view, name='generadorQr'),
-    path('consulta/',views.enfermedad_list, name='enfermedad_list'),
+    path('consulta/', views.enfermedad_list, name='enfermedad_list'),
 ]

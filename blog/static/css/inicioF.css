@@ -29,7 +29,6 @@ body{
     text-align: center;
     font-family: 'Century Gothic';
     font-weight: bold;
-    
 }
 
 .estructura label{
@@ -60,15 +59,15 @@ body{
     border: none;
     border-radius: 40px 10px;
     box-shadow: 0 9px #999;
-  }
+}
   
-  .boton:hover {background-color: #3e8e41}
-  
-  .boton:active {
+.boton:hover {background-color: #3e8e41}
+
+.boton:active {
     background-color: #3e8e41;
     box-shadow: 0 5px #666;
     transform: translateY(4px);
-  }
+}
 
 @media (max-width: 768px) {
     .titulo{
