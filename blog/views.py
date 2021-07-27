@@ -84,9 +84,10 @@ def generadorQr_view(request):
     if request.method == "POST":
         factory = qrcode.image.svg.SvgImage
         img = qrcode.make(request.POST.get("qr_text",""), image_factory=factory, box_size=20)
-        img.save("some_file.png")
+        
         stream = BytesIO()
         img.save(stream)
+        img.save("qr.png")
         data["svg"] = stream.getvalue().decode()
     return render(request, "seguimiento/generadorQr.html", data)
 
